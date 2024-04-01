@@ -1,0 +1,17 @@
+<div class="login-wrapper">
+    <form [formGroup]="loginForm" class="form" (submit)="submit()">
+        <h2>Login</h2>
+        <div class="input-group">
+            <input type="email" formControlName="email" name="email" id="email" required />
+            <label for="email">User Name</label>
+        </div>
+        <div class="input-group">
+            <input type="password" formControlName="password" name="loginPassword" id="loginPassword" required />
+            <label for="loginPassword">Password</label>
+        </div>
+        <div class="d-flex w-75">
+            <input type="submit" value="Submit" class="submit-btn" />
+            <input routerLink="/register" type="submit" value="Register" class="submit-register-btn mx-3" />
+        </div>
+    </form>
+</div>

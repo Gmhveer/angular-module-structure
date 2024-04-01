@@ -1,0 +1,14 @@
+<div class="row my-3">
+    <div class="d-flex justify-content-around">
+        <div>
+            <app-component-a (componentAToMain)="onLogin($event)"></app-component-a>
+        </div>
+        <h2>{{bonusPoint}}</h2>
+        <div>
+            <app-component-b [inputFromParent] = "counter" ></app-component-b>
+        </div>
+    </div>
+    
+
+
+</div>

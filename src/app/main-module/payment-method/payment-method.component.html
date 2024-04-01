@@ -1,0 +1,24 @@
+<!-- <mat-card> -->
+  <div class="text-align mx-auto my-4">
+    <div class="card mx-auto" style="width: 18rem;">
+        <div class="card-body" style="background: linear-gradient(110deg, #0d6efd 60%, #ffed4b 60%);">
+            <form class="example-form">
+                <!-- <mat-form-field class="example-full-width">
+                  <mat-label>Payment Value</mat-label>
+                  <input matInput placeholder="10 rupee" value="10">
+                </mat-form-field> -->
+                <label class="text-center" for="email">Pay Amount</label>
+                <div class="input-group">
+                  <input type="number" formControlName="pay" name="pay" id="pay" required placeholder="Enter Amount" />
+              </div>
+              </form>
+              
+            <!-- <button class="btn btn-primary rounded-pill px-3 my-2" *ngIf="!showPaypalButtons" (click)="pay(2)">PAY</button> -->
+            <div class="my-4">
+              <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+            </div>
+            <!-- <button class="btn btn-primary" *ngIf="showPaypalButtons" (click)="back()">Volver atras</button> -->
+        </div>
+    </div>
+  </div>
+<!-- </mat-card> -->

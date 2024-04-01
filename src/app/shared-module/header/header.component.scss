@@ -1,0 +1,27 @@
+ul.nav {
+    margin:0;
+    padding:0;
+    list-style:none;
+    height:36px; line-height:36px;
+    background: linear-gradient(110deg, #9338c9 60%, #634bff 60%); /* you can change the backgorund color here. */
+    font-size:13px;
+    font-family: cursive;
+}
+ul.nav li {
+    border-right:1px solid white; /* you can change the border color matching to your background color */
+    float:left;
+    border-radius: 10px;
+
+}
+ul.nav a {
+    display:block;
+    padding:0 28px;
+    color:#ccece6;
+    text-decoration:none;
+}
+ul.nav a:hover,
+ul.nav li.current a {
+    background:#17151c;
+    box-shadow: 1px 6px 9px #5424c4;
+    border-radius: 10px;
+}

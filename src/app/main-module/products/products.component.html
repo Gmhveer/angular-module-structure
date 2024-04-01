@@ -1,0 +1,15 @@
+<div >
+    <div class="float-right text-align-right">
+      
+    </div>
+    <div *ngFor="let item of productList" class="column">
+        <div class="card my-2">
+            <img src="https://i0.wp.com/www.gktoday.in/wp-content/uploads/2016/04/Product-in-Marketing.png?w=1140&ssl=1"
+                alt="Denim Jeans" style="width:100%">
+            <h1 class="ptext">{{item.title}}</h1>
+            <p class="price">${{item.price}}</p>
+            <p class="ptext">{{item.description}}</p>
+            <p><button>Add to Cart</button></p>
+        </div>
+    </div>
+</div>
