@@ -19,3 +19,4 @@ jobs:
       - name: Build
         run: npm run build:ci
       - name: Archive build
+        run: echo "Archive build step"
