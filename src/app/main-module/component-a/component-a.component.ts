@@ -12,6 +12,11 @@ export class ComponentAComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  ngOnChanges(){
+    console.log('On changes componentA running');
+  }
+
   sendToParent(name: Number) {
     this.componentAToMain.emit(name);
     this.comman.bonus.next(name);

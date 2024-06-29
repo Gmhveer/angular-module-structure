@@ -20,6 +20,10 @@ export class DashboardComponent implements OnInit {
        this.comman.counterNumber.subscribe(result => this.bonusPoint = this.bonusPoint + result)
 
   }
+  ngOnChanges(){
+    console.log('On changes dashboard running');
+    
+  }
   onLogin(name: any) {
     this.counter = this.counter + name;
   }

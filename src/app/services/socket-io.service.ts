@@ -17,12 +17,12 @@ export class SocketIoService {
 
     //CHECK CONNECTION EVENT
     socket.on("connect", () => {
-      console.log(socket.id, 'Connected'); // x8WIv7-mJelg7on_ALbx
+      // console.log(socket.id, 'Connected'); // x8WIv7-mJelg7on_ALbx
     });
 
     //disconnect Event
     socket.on("disconnect", () => {
-      console.log(socket.id); // undefined
+      // console.log(socket.id); // undefined
     });
 
     socket.on("qr", (data) => {

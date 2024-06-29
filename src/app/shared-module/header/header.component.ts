@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  profile: any = null;
+  constructor(private router: Router) {
+    this.profile = localStorage.getItem('auth') == 'success';
+  }
 
   ngOnInit(): void {
   }
-
+  logout() {
+    localStorage.clear();
+    this.router.navigate(['/login'])
+  }
 }

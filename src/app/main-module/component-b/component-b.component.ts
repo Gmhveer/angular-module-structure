@@ -17,13 +17,29 @@ export class ComponentBComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log('On componentB running:ngOnInit');
+    
     this.subscription = this.comman.bonus.subscribe(result => this.bonusPoint = this.bonusPoint + result)
   }
+  ngOnChanges(){
+    console.log('On componentB running: ngOnChanges');
+    
+  }
+
+  ngDoCheck(){
+    console.log("On ng: Docheck");
+    
+  }
   ngOnDestroy(): void {
+    console.log("Ng destroy");
+    
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.
     this.subscription = this.subscription ? undefined : this.subscription;
   }
 
-
+  ngAfterContentChecked(){
+    console.log("ngAfterContent Checked called");
+    
+  }
 }

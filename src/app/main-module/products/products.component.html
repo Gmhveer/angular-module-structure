@@ -1,9 +1,24 @@
-<div >
-    <div class="float-right text-align-right">
-      
+<div class="product-wrapper">
+    <div style="margin: 2px;">
+        <button class="btn btn-primary" (click)="addProduct()">+ Add Product</button>
+    </div>
+    <div *ngIf="isOpenProduct" class="float-right text-align-right">
+        <div class="modal-wrapper">
+            <form [formGroup]="addProductForm" class="form" (submit)="submit()">
+                <h2>Add Product</h2>
+                <div class="input-group" *ngFor="let field of fields">
+                    <input [type]="field" [formControlName]="field" [name]="field" [id]="field" required />
+                    <label [for]="field">{{field}}</label>
+                </div>
+                <div class="d-flex w-75">
+                    <input type="submit" value="Submit" class="submit-btn" />
+                    <input type="submit" value="Cancel" class="submit-register-btn mx-3" (click)="cancel()" />
+                </div>
+            </form>
+        </div>
     </div>
     <div *ngFor="let item of productList" class="column">
-        <div class="card my-2">
+        <div class="card my-2 px-2 py-2">
             <img src="https://i0.wp.com/www.gktoday.in/wp-content/uploads/2016/04/Product-in-Marketing.png?w=1140&ssl=1"
                 alt="Denim Jeans" style="width:100%">
             <h1 class="ptext">{{item.title}}</h1>

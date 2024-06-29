@@ -10,6 +10,7 @@ import { ComponentBComponent } from './component-b/component-b.component';
 import { ProductsComponent } from './products/products.component';
 import { PaymentMethodComponent } from './payment-method/payment-method.component';
 import { NgxPayPalModule } from 'ngx-paypal';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { NgxPayPalModule } from 'ngx-paypal';
     NgxPayPalModule,
     SharedModuleModule,
     MainModuleRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class MainModuleModule { }

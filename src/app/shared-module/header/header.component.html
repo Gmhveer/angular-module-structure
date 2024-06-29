@@ -1,11 +1,19 @@
-<ul class="nav">
-    <li><a href="#">Home</a></li>
-    <li routerLinkActive="router-link-active" ><a href="#">About Us</a></li>
-    <li><a [routerLink]="['/dashboard/payment']"  >Payment Services</a></li>
-    <li><a [routerLink]="['/dashboard/products']" routerLinkActive="router-link-active">Products</a></li>
-    <li><a href="#">Contact</a></li>
-    <!-- <li style="float:right;padding-right:20px;display: flex;">
-        <div style="padding-right: 10px;"><button class="btn">Login</button></div>
-        <div><button class="btn">Register</button></div>
-    </li> -->
-</ul>
+<div class="nav-wrapper">
+
+    <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li routerLinkActive="router-link-active"><a href="#">About Us</a></li>
+        <li><a [routerLink]="['/dashboard/payment']">Payment Services</a></li>
+        <li><a [routerLink]="['/dashboard/products']" routerLinkActive="router-link-active">Products</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div>
+        <div *ngIf="profile ==null" style="float:right;padding-right:20px;display: flex;">
+            <div style="padding-right: 10px;"><button class="btn">Login</button></div>
+            <div><button class="btn">Register</button></div>
+        </div>
+        <div *ngIf="profile !=null" style="float:right;padding-right:20px;display: flex;">
+            <div><button class="btn logout" (click)="logout()">LogOut</button></div>
+        </div>
+    </div>
+</div>
